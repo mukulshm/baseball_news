@@ -1,6 +1,5 @@
 source 'http://rubygems.org' #CHANGED FROM HTTPS TO JUST HTTP DUE TO SSL CERTIFICATE ERROR
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -17,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 ################ ADDED BASED ON ARJUN FEEDBACK #############
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git", :branch => "simple"
 gem 'mime-types', '~> 2.6.1'
+gem 'redditkit', '~> 1.0.1'
+gem 'twitter', '~> 5.14.0'
+gem 'simple_oauth', '~> 0.3.1'
 ############################################################
 
 

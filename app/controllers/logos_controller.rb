@@ -3,8 +3,23 @@ class LogosController < ApplicationController
     @logos = Logo.all
   end
 
+  def home
+    @logos = Logo.all
+  end
+
   def show
     @logo = Logo.find(params[:id])
+    #@path1 = Path.find(@logo.team_id.)
+
+    #reddit_path = 'subreddit:' + @path1.path
+    @reddit = RedditKit.search 'subreddit:kcroyals' #.front_page
+
+
+    #require 'open-uri'
+    #require 'json'
+
+    #url = "http://www.reddit.com/r/kcroyals/new.json?sort=new"
+    #@parsed_data = JSON.parse(open(url).read)
   end
 
   def new

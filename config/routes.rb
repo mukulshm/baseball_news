@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get("/", { :controller => "logos", :action => "index" })
+  get("/", { :controller => "news", :action => "home" })
+
+  ######## MANUAL ADDITION ###########
+  get "/news/1/:team_id/", :controller => "news", :action => "reddit" #THIS IS FOR REDDIT PLATFORM
+  get "/news/2/:team_id/", :controller => "news", :action => "twitter" #THIS IS FOR REDDIT PLATFORM
+
+  ###################################
+
   # Routes for the Team resource:
   # CREATE
   get "/teams/new", :controller => "teams", :action => "new"

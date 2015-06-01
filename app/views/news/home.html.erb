@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h1>
+    Major League Baseball News
+    <!-- <a href="/logos/new" class="btn btn-lg btn-success"><i class="fa fa-plus"></i></a> -->
+  </h1>
+  <h4>
+    Welcome to the Major League Baseball News app! This app is designed to aggregate live information about your favorite baseball teams from external sources, such as Reddit and Twitter.
+  </h4>
+  <h5>
+    Click a platform name below a team to get started
+  </h5>
+</div>
+
+<!-- Responsive, Isotope-based layout example -->
+
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <input type="text" id="quicksearch" placeholder="Search Logos (start typing)" class="form-control">
+  </div>
+</div> -->
+
+<hr>
+
+<div class="row isotope-container">
+<% @logos.each do |logo| %>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 isotope-item">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= logo.team.name %></h3>
+      </div>
+      <div class="panel-body">
+        <dl>
+          <dd>
+            <img src="<%= logo.path %>">
+          </dd>
+        </dl>
+        <!-- <div class="btn-group btn-group-justified">
+          <a href="/logos/<%= logo.id %>" class="btn btn-primary">
+            <i class="fa fa-search-plus"></i>
+          </a>
+        </div> -->
+        <div class="btn-group" role="group" aria-label="...">
+          <a href="/news/1/<%= logo.id %>">
+            <button type="button" class="btn btn-default">Reddit</button>
+          </a>
+          <a href="/news/2/<%= logo.id %>">
+            <button type="button" class="btn btn-default">Twitter</button>
+          </a>
+          <!-- <button type="button" class="btn btn-default">MLB</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
