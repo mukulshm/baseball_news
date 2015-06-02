@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Path #<%= @path.id %></h3>
+        <h3 class="panel-title"></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -17,7 +17,7 @@
               <dd><%= @path.platform_id %></dd>
 
               <dt>Team</dt>
-              <dd><%= @path.team_id %></dd>
+              <dd><%= @path.team.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">

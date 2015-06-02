@@ -4,7 +4,7 @@
   <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Logo #<%= @logo.id %></h3>
+        <h3 class="panel-title"><%= @logo.team.name %></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -14,7 +14,7 @@
               <dd><%= @logo.path %></dd>
 
               <dt>Team</dt>
-              <dd><%= @logo.team_id %></dd>
+              <dd><%= @logo.team.name %></dd>
 
             </dl>
             <div class="btn-group btn-group-justified">
@@ -38,33 +38,3 @@
 </div>
 
 <!-- End responsive panel example -->
-
-<!-- START OF LIST -->
-<!-- Start Addition of Panel -->
-  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Reddit for <%= @logo.team.name %></h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-12">
-            <dl class="dl-horizontal">
-              <ul class="list-group">
-                  <% @reddit.each do |reddit| %>
-                    <li class="list-group-item">
-                      <!-- <%= "The link titled '#{reddit.title}' was posted by #{reddit.author}." %> -->
-                      <a herf="<%= reddit.permalink %>">
-                        <%= reddit.title %>
-                      </a>
-                  </li>
-                  <% end %>
-              </ul>
-            </dl>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- END OF LIST -->
